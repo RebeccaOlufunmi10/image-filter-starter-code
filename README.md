@@ -2,7 +2,7 @@ Elastic beanstalk endpoint : http://starter-co.us-east-1.elasticbeanstalk.com/
 
 Deployment screenshot is located at /image-filter-starter-code/deployment_screenshots
 
-Github : https://github.com/RebeccaOgunyemi/image-filter-starter-code.git
+Github : https://github.com/RebeccaOlufunmi10/image-filter-starter-code.git
 
 
 
