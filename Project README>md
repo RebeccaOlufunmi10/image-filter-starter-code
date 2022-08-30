@@ -1,3 +1,52 @@
+Run "aws configure"
+Then input the credentials provided in the classroom for the access id and secret id.
+Then run "aws configure set aws_session_token <the session token providedin the classroom>"
+Then launch your cloud console from the classroom and create an Iam user, DON'T add the user to group, just attach permissions directly to the iam user,
+Then launch eb init, it will show "not authorised......" Then it will ask you to input access id and secret id, Input the access id and secret id from the newly created Iam user.
+
+
+
+This is usually caused when elastic beanstalk cannot find the the package.json file inside of the zipped folder.
+Kindly ensure that you run the 'npm run build' and also that you have the Archived.zip file in your www directory. You should have them after running 'npm.run build'.
+Also, ensure that you declare the Archived.zip in your .elasticbeanstalk deployed bloc.
+Kindly verify all of this before running the 'eb init' and 'eb create'.
+
+
+
+1a) delete the node_modules from the project directory.
+1b) run 'npm install'
+1c) run 'npm run build'
+You should not have that error again. If it persists, try the second steps
+Make sure you are in the project directory.
+1) cp package.json www
+2) mkdir www/tmp
+3) cd www
+4) zip Archived.zip .
+The above should give you a zipped archive that you can upload into your elastic beanstalk.
+Also, ensure to have the Archived.zip is declared in your elastic beanstalk bloc.
+
+
+
+The rimraf is an upgrade command to rm -rf which remove or deletes the argument as passed.
+You can skip the 'npm run clean' command which have the rimraf if you don't have to remove the www directory.
+
+
+
+
+eb path change path: echo 'export PATH="/Users/rebeccaogunyemi/.ebcli-virtual-env/executables:$PATH"' >> ~/.bash_profile && source ~/.bash_profile
+   
+
+command for ngrok - ngrok http PORT_NUMBER
+
+
+
+shift command p to check credentials
+
+
+
+aws sts get-caller-identity       
+aws configure list-profiles
+
 Elastic beanstalk endpoint : http://starter-co.us-east-1.elasticbeanstalk.com/
 
 Deployment screenshot is located at /image-filter-starter-code/deployment_screenshots
